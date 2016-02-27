@@ -30,6 +30,9 @@ RUN \
     bash \
     curl \
     ca-certificates && \
+    echo "@testing http://dl-4.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories && \
+    apk update && \
+    apk add php-redis@testing && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
     mkdir -p /run/apache2/ && \
   cat docker_logo.txt
