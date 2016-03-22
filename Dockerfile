@@ -27,6 +27,7 @@ RUN \
     php-soap \
     php-openssl \
     php-json \
+    php-zlib \
     bash \
     curl \
     ca-certificates && \
