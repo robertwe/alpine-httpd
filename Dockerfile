@@ -11,29 +11,29 @@ RUN \
     apache2-ssl \
     apache2-utils \
     apache2-error \
-    php-cli \
-    php-phar \
-    php-intl \
-    php-mysql \
-    php-xml \
-    php-enchant \
-    php-bcmath \
-    php-apache2 \
-    php-sysvsem \
-    php-gd \
-    php-pdo_mysql \
-    php-opcache \
-    php-posix \
-    php-soap \
-    php-openssl \
-    php-json \
-    php-zlib \
+    php5-cli \
+    php5-phar \
+    php5-intl \
+    php5-mysql \
+    php5-xml \
+    php5-enchant \
+    php5-bcmath \
+    php5-apache2 \
+    php5-sysvsem \
+    php5-gd \
+    php5-pdo_mysql \
+    php5-opcache \
+    php5-posix \
+    php5-soap \
+    php5-openssl \
+    php5-json \
+    php5-zlib \
     bash \
     curl \
     ca-certificates && \
     echo "@testing http://dl-4.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories && \
     apk update && \
-    apk add php-redis@testing && \
+    apk add php5-redis@testing && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
     mkdir -p /run/apache2/ && \
   cat docker_logo.txt
