@@ -6,15 +6,15 @@
   
 ### How to use it?
 If you would like to [pull](https://docs.docker.com/engine/reference/commandline/pull/) it
-you should simple execute 
-`docker pull nwms/httpd`. By default you should get the latest version of the httpd container.
+you should simple execute `docker pull nwms/httpd`.     
+By default you should get the latest version of the httpd container.
 To get it up and running we need to execute `docker run -d -p 8080:80 nwms/httpd`
 After that you should see on port 8080 at `localhost` default message from Apache installed
 inside the container. 
 To get details about installed PHP version inside the container you can simple go to `http://127.0.0.1:8080/index.php`
 if you started the `nwms/httpd` container as mentioned above.
 
-If you want to check what's inside the container without running it in the background you can just execute: 
+If you want to check what's inside the container without running it in the background you can just execute:     
 ``
 docker run -it --entrypoint bash nwms/httpd
 ``
